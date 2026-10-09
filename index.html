@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff1f3" />
+  <title>Quick Check-In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Back to top"><span class="brand-heart">♥</span> a little surprise</a>
+    <nav aria-label="Main navigation">
+      <a href="#memories">Memories</a><a href="#celebrate">Celebrate</a><a href="#letter">A Letter</a>
+    </nav>
+    <button class="music-button" id="musicButton" aria-pressed="false" title="Toggle music">♫ <span>Music</span></button>
+  </header>
+
+
+  <section class="form-gate" id="formGate" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <div class="gate-mark">QF</div>
+      <p class="gate-kicker">QUICK CHECK-IN · 01 MIN</p>
+      <h1 id="gateTitle">A little check-in</h1>
+      <p class="gate-description">Just a few quick questions. Choose whatever feels right to you.</p>
+      <form id="checkInForm">
+        <label for="visitorName">What should we call you?</label>
+        <input id="visitorName" name="visitorName" type="text" placeholder="Type your name" autocomplete="given-name" required>
+        <fieldset>
+          <legend>Pick the mood that suits today</legend>
+          <label class="choice"><input type="radio" name="mood" value="Calm" required><span>Calm ☁️</span></label>
+          <label class="choice"><input type="radio" name="mood" value="Happy"><span>Happy ☀️</span></label>
+          <label class="choice"><input type="radio" name="mood" value="Dreamy"><span>Dreamy ✨</span></label>
+        </fieldset>
+        <label for="tinyAnswer">One little thing that makes you smile?</label>
+        <input id="tinyAnswer" name="tinyAnswer" type="text" placeholder="Your answer (optional)">
+        <button class="primary-button gate-submit" type="submit">Submit answers <span>→</span></button>
+        <p class="gate-privacy">This little check-in stays in your browser; it isn't sent to a server.</p>
+      </form>
+    </div>
+    <div class="gate-side-note">A small moment for yourself <span>✦</span></div>
+  </section>
+
+  <main id="surpriseSite" class="site-hidden">
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="sparkle">✦</span> TODAY IS ALL ABOUT YOU <span class="sparkle">✦</span></p>
+        <h1>For someone<br>very <em>special.</em></h1>
+        <p class="hero-sub">A little website, a lot of love, and a surprise made just for you.</p>
+        <p class="recipient">Happy Birthday, <span>Rabeka</span> <span class="pink-heart">♥</span></p>
+        <button class="primary-button" id="openSurprise">Open your surprise <span>↗</span></button>
+        <div class="tiny-note">made with love, just for you</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-photo photo-frame">
+          <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=85" alt="Soft birthday balloons and celebration" />
+          <div class="photo-caption">A day as lovely as you ✧</div>
+        </div>
+        <div class="floating-note note-top">a wish for you ✧</div>
+        <div class="floating-note note-bottom">you are loved ♥</div>
+        <span class="decor-heart heart-one">♥</span><span class="decor-heart heart-two">♡</span>
+      </div>
+      <div class="scroll-cue">SCROLL FOR YOUR SURPRISE <span>↓</span></div>
+    </section>
+
+    <section class="section reveal" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">LITTLE MOMENTS, BIG MEANING</p>
+        <h2>Our beautiful <em>memories</em></h2>
+        <p>Some moments become memories. Some people make them unforgettable.</p>
+      </div>
+      <div class="memory-grid">
+        <figure class="memory-card tall">
+          <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=85" alt="Golden sunrise over a peaceful landscape">
+          <figcaption><span>01</span> Golden little moments</figcaption>
+        </figure>
+        <figure class="memory-card">
+          <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=85" alt="Friends sharing a happy moment">
+          <figcaption><span>02</span> The happiest laughs</figcaption>
+        </figure>
+        <figure class="memory-card offset">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85" alt="Soft pink flowers">
+          <figcaption><span>03</span> Little things to treasure</figcaption>
+        </figure>
+        <figure class="memory-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=85" alt="Beautiful travel landscape">
+          <figcaption><span>04</span> Stories still to come</figcaption>
+        </figure>
+      </div>
+      <p class="gallery-tip">♡ Tip: Replace these sample pictures with your own photos in <strong>index.html</strong>.</p>
+    </section>
+
+    <section class="celebration section reveal" id="celebrate">
+      <div class="celebration-text">
+        <p class="eyebrow">MAKE A WISH, RABEKA</p>
+        <h2>A new year of you.<br><em>A thousand new reasons to smile.</em></h2>
+        <p>May your days be gentle, your dreams grow bigger, and your heart always find reasons to be happy.</p>
+        <button class="primary-button" id="wishButton">Make a wish ✨</button>
+        <p class="wish-result" id="wishResult" aria-live="polite"></p>
+      </div>
+      <div class="cake-scene">
+        <div class="cake-glow"></div>
+        <div class="candles" aria-label="Birthday candles">
+          <span class="candle"><i></i></span><span class="candle"><i></i></span><span class="candle"><i></i></span><span class="candle"><i></i></span><span class="candle"><i></i></span>
+        </div>
+        <div class="cake-top"></div><div class="cake-body"><span>♥</span><span>✿</span><span>♥</span></div><div class="cake-base"></div>
+        <div class="cake-plate"></div>
+        <p class="cake-caption">A little sweetness for your special day</p>
+      </div>
+    </section>
+
+    <section class="letter-section section reveal" id="letter">
+      <div class="letter-decoration">✧</div>
+      <p class="eyebrow">ONE LAST LITTLE SURPRISE</p>
+      <h2>A letter <em>for you</em></h2>
+      <p class="letter-intro">Some words are too special to leave unsaid.</p>
+      <button class="envelope-button" id="letterButton" aria-expanded="false" aria-controls="letterContent">
+        <span class="envelope-icon">✉</span><span>Open your letter</span><span class="envelope-arrow">↗</span>
+      </button>
+      <article class="letter-content" id="letterContent" hidden>
+        <p class="letter-dear">Dear Rabeka,</p>
+        <p>Happy Birthday to someone who deserves so much happiness. I hope this new chapter brings you peaceful days, beautiful surprises, genuine smiles, and people who remind you how special you are.</p>
+        <p>Thank you for being exactly who you are. May all the little wishes you keep in your heart find their way to you, one by one.</p>
+        <p>Today is your reminder that you matter, you are appreciated, and you deserve all the good things life has to offer.</p>
+        <p class="letter-signoff">With lots of love, <span>Someone who cares about you ♥</span></p>
+        <button class="text-button" id="closeLetter">Fold the letter ↑</button>
+      </article>
+    </section>
+
+    <section class="finale section reveal" id="finale">
+      <div class="finale-stars">✦　✧　✦　♡　✦</div>
+      <p class="eyebrow">AND ALWAYS REMEMBER</p>
+      <h2>Keep shining, <em>Rabeka.</em></h2>
+      <p>The world is a little brighter with you in it.</p>
+      <button class="outline-button" id="againButton">Experience the surprise again ↻</button>
+      <div class="finale-signature">made with <span>♥</span> for Rabeka</div>
+    </section>
+  </main>
+  <footer>For Rabeka, with love <span>♥</span> · A little digital birthday gift</footer>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
